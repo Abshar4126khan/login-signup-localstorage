@@ -31,6 +31,7 @@ const Login = () => {
         e.preventDefault()
 
         if (email == "" || password == "") {
+
             alert("Please Enter Details")
         } else {
             let getDetails = JSON.parse(localStorage.getItem("user"));
@@ -64,7 +65,7 @@ const Login = () => {
                     <div className="flex flex-col mt-5 space-y-4">
 
                         <input className="border border-gray-500 p-[3px] text-sm w-80 outline-none" type="text" name="email" placeholder="Enter your Email" onChange={handleInput} />
-                        <input className="border border-gray-500 p-[3px] text-sm w-80 outline-none" type="text" name="password" placeholder="Enter your Password" onChange={handleInput} />
+                        <input className="border border-gray-500 p-[3px] text-sm w-80 outline-none" type="password" name="password" placeholder="Enter your Password" onChange={handleInput} />
                     </div>
                     <p className="text-[13px] text-gray-700 mt-1">If you create have account ? <a onClick={signup} className="text-blue-500 underline" href="#">Signup</a></p>
                     <button className="ml-26 mt-5 bg-green-600 px-6 py-0.5 text-sm font-semibold text-white cursor-pointer">

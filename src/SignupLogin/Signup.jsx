@@ -4,6 +4,10 @@ import Navbar from "./Navbar"
 import { useNavigate } from "react-router-dom"
 export const Signup = () => {
 
+    const loogin = () => {
+        navigate("/login")
+    }
+
     const userDetail = {
         name: "",
         email: "",
@@ -57,7 +61,7 @@ export const Signup = () => {
                         <input className="border border-gray-500 p-[3px] text-sm w-80 outline-none" type="email" name="email" placeholder="Enter your Email" onChange={handleInput} />
                         <input className="border border-gray-500 p-[3px] text-sm w-80 outline-none" type="password" name="password" placeholder="Enter your Password" onChange={handleInput} />
                     </div>
-                    <p className="text-[13px] text-gray-700 mt-1">Already have an account ? <a className="text-blue-500 underline" href="/login">Login</a></p>
+                    <p className="text-[13px] text-gray-700 mt-1">Already have an account ? <a onClick={loogin} className="text-blue-500 underline" href="#">Login</a></p>
                     <button className="ml-26 mt-5 bg-green-600 px-6 py-0.5 text-sm font-semibold text-white cursor-pointer">
                         SignUp
                     </button>
